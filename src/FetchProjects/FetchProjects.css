@@ -1,0 +1,19 @@
+.fetchprojects_wrapper{
+    text-align: center;
+    background-color: darkslategray;
+}
+.jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+}
+.navigation{
+   
+}
+.navigation button {
+    margin-right: 15px;
+    border-radius: 8px;
+    width: 150px;
+    padding: 10px 24px;
+
+}
