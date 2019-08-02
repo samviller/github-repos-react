@@ -29,28 +29,28 @@ handleAll =()=>{
 // handleAll =(num)=>{
 //     switch(num){
 //         case '1':
-//                 {this.setState({url="https://api.github.com/search/repositories?q=stars%3A%3E0&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=stars%3A%3E0&sort=stars&per_page=30";}
 //             break;
 //         case '2':
-//                 {this.setState({url="https://api.github.com/search/repositories?q=language:Ruby&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=language:Ruby&sort=stars&per_page=30";}
 //             break;
 //         case '3':
-//                 {this.setState({url="https://api.github.com/search/repositories?q=language:Java&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=language:Java&sort=stars&per_page=30";}
 //             break;
 //         case '4':
-//                 {this.setState({url="https://api.github.com/search/repositories?q=language:JavaScript&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=language:JavaScript&sort=stars&per_page=30";}
 //             break;
 //         case '5':
-//                 this.setState({url="https://api.github.com/search/repositories?q=language:Python&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=language:Python&sort=stars&per_page=30";}
 //             break;
 //         case '6':
-//                 {this.setState({url="https://api.github.com/search/repositories?q=language:cpp&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=language:cpp&sort=stars&per_page=30";}
 //             break;
 //         case '7':
-//                 {this.setState(url="https://api.github.com/search/repositories?q=language:c&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=language:c&sort=stars&per_page=30";}
 //             break;
 //         default:
-//                 {this.setState(url="https://api.github.com/search/repositories?q=stars%3A%3E0&sort=stars&per_page=30";}
+//                 {url="https://api.github.com/search/repositories?q=stars%3A%3E0&sort=stars&per_page=30";}
                 
                                 
 //     }
@@ -59,37 +59,36 @@ handleAll =()=>{
 //     console.log("Fetch All");
 // }
 
-  
-// handleRuby =()=>{
-//     this.setState({url:"https://api.github.com/search/repositories?q=language:Ruby&sort=stars&per_page=30"});
-//     console.log("Fetch Ruby");
-//     this.forceUpdate();
-// }
-// handleJava =()=>{
-//     this.setState({url:"https://api.github.com/search/repositories?q=language:Java&sort=stars&per_page=30"});
-//     console.log("Fetch Ruby");
-//     this.forceUpdate();
-// }
-// handleJavaScript =()=>{
-//     this.setState({url:"https://api.github.com/search/repositories?q=language:JavaScript&sort=stars&per_page=30"});
-//     console.log("Fetch Ruby");
-//     this.forceUpdate();
-// }
-// handlePython =()=>{
-//     this.setState({url:"https://api.github.com/search/repositories?q=language:Python&sort=stars&per_page=30"});
-//     console.log("Fetch Ruby");
-//     this.forceUpdate();
-// }
-// handleC =()=>{
-//     this.setState({url:"https://api.github.com/search/repositories?q=language:c&sort=stars&per_page=30"});
-//     console.log("Fetch Ruby");
-//     this.forceUpdate();
-// }
-// handleCpp =()=>{
-//     this.setState({url:"https://api.github.com/search/repositories?q=language:cpp&sort=stars&per_page=30"});
-//     console.log("Fetch Ruby");
-//     this.forceUpdate();
-// }
+handleRuby =()=>{
+    this.setState({url:"https://api.github.com/search/repositories?q=language:Ruby&sort=stars&per_page=30"});
+    console.log("Fetch Ruby");
+    this.forceUpdate();
+}
+handleJava =()=>{
+    this.setState({url:"https://api.github.com/search/repositories?q=language:Java&sort=stars&per_page=30"});
+    console.log("Fetch Ruby");
+    this.forceUpdate();
+}
+handleJavaScript =()=>{
+    this.setState({url:"https://api.github.com/search/repositories?q=language:JavaScript&sort=stars&per_page=30"});
+    console.log("Fetch Ruby");
+    this.forceUpdate();
+}
+handlePython =()=>{
+    this.setState({url:"https://api.github.com/search/repositories?q=language:Python&sort=stars&per_page=30"});
+    console.log("Fetch Ruby");
+    this.forceUpdate();
+}
+handleC =()=>{
+    this.setState({url:"https://api.github.com/search/repositories?q=language:c&sort=stars&per_page=30"});
+    console.log("Fetch Ruby");
+    this.forceUpdate();
+}
+handleCpp =()=>{
+    this.setState({url:"https://api.github.com/search/repositories?q=language:cpp&sort=stars&per_page=30"});
+    console.log("Fetch Ruby");
+    this.forceUpdate();
+}
 
 componentDidUpdate(){
     
@@ -104,14 +103,10 @@ shouldComponentUpdate(props,state){
     // // this.forceUpdate();
     //     }
     // );
-    // this.forceUpdate();
-    return false;
+    this.forceUpdate();
+    return true;
 }
-handle =(sub)=>{
-    this.setState({url:"https://api.github.com/search/repositories?q=language:"+sub+"&sort=stars&per_page=30"});
-        console.log("Fetch Ruby");
-    //    this.forceUpdate();
-  }
+
 
 
     render() {
@@ -127,12 +122,12 @@ handle =(sub)=>{
                 
                     
                     <button onClick={this.handleAll} className="btn btn-primary btn-md">All</button>
-                    <button onClick={this.handle("Ruby")} className="btn btn-primary btn-md">Ruby</button>
-                    <button onClick={this.handle("Java")} className="btn btn-primary btn-md">Java</button>
-                    <button onClick={this.handle("JavaScript")} className="btn btn-primary btn-md">JavaScript</button>
-                    <button onClick={this.handle("Python")} className="btn btn-primary btn-md">Python</button>
-                    <button onClick={this.handle("cpp")} className="btn btn-primary btn-md">C++</button>
-                    <button onClick={this.handle("c")} className="btn btn-primary btn-md">C</button>
+                    <button onClick={this.handleRuby} className="btn btn-primary btn-md">Ruby</button>
+                    <button onClick={this.handleJava} className="btn btn-primary btn-md">Java</button>
+                    <button onClick={this.handleJavaScript} className="btn btn-primary btn-md">JavaScript</button>
+                    <button onClick={this.handlePython} className="btn btn-primary btn-md">Python</button>
+                    <button onClick={this.handleCpp} className="btn btn-primary btn-md">C++</button>
+                    <button onClick={this.handleC} className="btn btn-primary btn-md">C</button>
                 
                 </div>
                 <p><br></br> </p>
